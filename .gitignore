@@ -164,6 +164,5 @@ flyway-rulesengine-sqlfluff/sqlfluff*
 flyway-rgcompare/src/main/resources/obj/
 flyway-rgcompare/rgcompare/
 out/**
-# flyway config files
-flyway.conf
+
 
