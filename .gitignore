@@ -130,8 +130,7 @@ dist
 .pnp.*
 
 # ignore flyway generated files
-report.html
-report.json
+report.*
 bin
 build
 target
@@ -164,5 +163,3 @@ flyway-rulesengine-sqlfluff/sqlfluff*
 flyway-rgcompare/src/main/resources/obj/
 flyway-rgcompare/rgcompare/
 out/**
-
-
