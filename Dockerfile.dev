@@ -1,4 +1,0 @@
-FROM flyway/flyway
-WORKDIR /usr/src/flyway/
-COPY sql ./sql/
-COPY flyway.conf ./
