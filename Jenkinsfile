@@ -13,7 +13,7 @@ pipeline {
       agent any
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
-          sh 'docker build  -t $DOCKERHUB_USERNAME/migrate:latest -f Dockerfile .'
+          sh 'docker build --no-cache -t $DOCKERHUB_USERNAME/migrate:latest -f Dockerfile .'
         }
       }
     }
