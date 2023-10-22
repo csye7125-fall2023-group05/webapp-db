@@ -3,22 +3,35 @@ pipeline {
   stages {
 
     stage('Clone repository') {
-      agent any
+      when {
+        expression {
+          BRANCH_NAME == 'master'
+        }
+      }
       steps {
         checkout scm
       }
     }
 
     stage('Build Image') {
-      agent any
+      when {
+        expression {
+          BRANCH_NAME == 'master'
+        }
+      }
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
           sh 'docker build --no-cache -t $DOCKERHUB_USERNAME/migrate:latest -f Dockerfile .'
         }
       }
     }
+
     stage('Push Image') {
-      agent any
+      when {
+        expression {
+          BRANCH_NAME == 'master'
+        }
+      }
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
           sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
@@ -26,16 +39,10 @@ pipeline {
         }
       }
     }
-
-    stage('Image Clean up') {
-      agent any
-      steps {
-        sh 'docker system prune -a -f'
-      }
-    }
   }
   post {
     always {
+      sh 'docker system prune -a -f'
       sh 'docker logout'
     }
   }
