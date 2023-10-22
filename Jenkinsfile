@@ -26,6 +26,13 @@ pipeline {
         }
       }
     }
+
+    stage('Image Clean up') {
+      agent any
+      steps {
+        sh 'docker system prune -a -f'
+      }
+    }
   }
   post {
     always {
