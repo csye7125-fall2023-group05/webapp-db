@@ -1,28 +1,16 @@
-SET search_path TO csye7125;
+SET search_path TO app;
 
-CREATE TABLE cars (
-  id INT PRIMARY KEY,
-  brand VARCHAR(255),
-  model VARCHAR(255),
-  year INT 
-); 
-
-CREATE TABLE car_price (
-  car_id INT,
-  price INT,
-  FOREIGN KEY (car_id) REFERENCES cars(id)
-); 
-
-
-
-INSERT INTO cars (id,brand, model, year)
-VALUES
-  (1,'Volvo', 'p1800', 1968),
-  (2,'BMW', 'M1', 1978),
-  (3,'Toyota', 'Celica', 1975); 
-
-  INSERT INTO car_price (car_id,price)
-VALUES
-  (1,20000),
-  (2,50000),
-  (3,70000); 
+CREATE TABLE httpchecks(
+  id VARCHAR(255) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  uri VARCHAR(255) NOT NULL,
+  is_paused BOOLEAN NOT NULL,
+  num_retries INT NOT NULL,
+  uptime_sla INT NOT NULL,
+  response_time_sla INT NOT NULL,
+  use_ssl BOOLEAN NOT NULL,
+  response_status_code INT NOT NULL,
+  check_interval_in_seconds INT NOT NULL,
+  check_created DATE,
+  check_updated DATE
+);
