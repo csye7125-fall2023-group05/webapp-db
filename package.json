@@ -1,0 +1,27 @@
+{
+  "name": "webapp-db",
+  "version": "1.0.0",
+  "description": "[Flyway](https://documentation.red-gate.com/fd/postgresql-184127604.html) is a database migration tool. We will use the flyway migration scripts that will migrate our database from our local workstation to a container running an `init container`, which will run the migration scripts before starting our REST API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabNeu/webapp-db.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabNeu/webapp-db/issues"
+  },
+  "homepage": "https://github.com/rishabNeu/webapp-db#readme",
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.1",
+    "@semantic-release/npm": "^11.0.0",
+    "@semantic-release/release-notes-generator": "^12.0.0"
+  }
+}

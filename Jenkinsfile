@@ -1,5 +1,11 @@
 pipeline {
   agent any
+  tools {
+    nodejs "node"
+  }
+  environment {
+    GH_TOKEN = credentials('jenkins-pat')
+  }
   stages {
 
     stage('Clone repository') {
@@ -9,7 +15,20 @@ pipeline {
         }
       }
       steps {
+        cleanWs()
         checkout scm
+      }
+    }
+
+    stage('Release with semantic-release') {
+      when {
+        branch 'master'
+      }
+      steps {
+        sh '''
+        npm ci
+        npx semantic - release
+        '''
       }
     }
 
@@ -21,7 +40,7 @@ pipeline {
       }
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
-          sh 'docker build --no-cache -t $DOCKERHUB_USERNAME/migrate:latest -f Dockerfile .'
+          sh 'docker build --no-cache -t $DOCKERHUB_USERNAME/migrate:$(npm pkg get version | xargs) -t $DOCKERHUB_USERNAME/migrate:latest -f Dockerfile .'
         }
       }
     }
