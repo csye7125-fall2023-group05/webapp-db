@@ -27,7 +27,7 @@ pipeline {
       steps {
         sh '''
         npm ci
-        npx semantic - release
+        npx semantic-release
         '''
       }
     }
