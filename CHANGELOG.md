@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/csye7125-fall2023-group05/webapp-db/compare/v1.0.0...v1.0.1) (2023-10-27)
+
+
+### Bug Fixes
+
+* update jenkinsfile docker registry+repo ([5bc5345](https://github.com/csye7125-fall2023-group05/webapp-db/commit/5bc5345536edfb094593362a00f332f6c9e27da6))
+
 # 1.0.0 (2023-10-27)
 
 
