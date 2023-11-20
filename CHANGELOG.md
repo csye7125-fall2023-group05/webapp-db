@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/csye7125-fall2023-group05/webapp-db/compare/v1.0.1...v1.1.0) (2023-11-20)
+
+
+### Features
+
+* update flyway docker image to v10.0.1-alpine ([7e9f8b3](https://github.com/csye7125-fall2023-group05/webapp-db/commit/7e9f8b3057e3e648c931c950e23ea89a23049613)), closes [#19](https://github.com/csye7125-fall2023-group05/webapp-db/issues/19)
+
 ## [1.0.1](https://github.com/csye7125-fall2023-group05/webapp-db/compare/v1.0.0...v1.0.1) (2023-10-27)
 
 

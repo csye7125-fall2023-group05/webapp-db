@@ -1,6 +1,6 @@
 {
   "name": "webapp-db",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "[Flyway](https://documentation.red-gate.com/fd/postgresql-184127604.html) is a database migration tool. We will use the flyway migration scripts that will migrate our database from our local workstation to a container running an `init container`, which will run the migration scripts before starting our REST API.",
   "main": "index.js",
   "scripts": {
