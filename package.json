@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rishabNeu/webapp-db.git"
+    "url": "git+https://github.com/csye7125-fall2023-group05/webapp-db.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rishabNeu/webapp-db/issues"
+    "url": "https://github.com/csye7125-fall2023-group05/webapp-db/issues"
   },
-  "homepage": "https://github.com/rishabNeu/webapp-db#readme",
+  "homepage": "https://github.com/csye7125-fall2023-group05/webapp-db#readme",
   "dependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.0.0",
