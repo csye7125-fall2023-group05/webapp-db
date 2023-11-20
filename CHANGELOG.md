@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/csye7125-fall2023-group05/webapp-db/compare/v1.1.0...v1.1.1) (2023-11-20)
+
+
+### Bug Fixes
+
+* update `flyway.locations` to point to `sql/` scripts directory ([e145b9b](https://github.com/csye7125-fall2023-group05/webapp-db/commit/e145b9b5cd9389a905f39b1ac3cb6aecf85e491b)), closes [#21](https://github.com/csye7125-fall2023-group05/webapp-db/issues/21)
+
 # [1.1.0](https://github.com/csye7125-fall2023-group05/webapp-db/compare/v1.0.1...v1.1.0) (2023-11-20)
 
 
